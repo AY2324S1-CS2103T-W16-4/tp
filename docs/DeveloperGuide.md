@@ -310,7 +310,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 #### Use case: Remove a friend
 **MSS**
-1. User requests a list of friends
+1. User requests a list of his friends
 2. FriendBook shows a list of user's friends
 3. User requests to remove a specific friend in the list
 4. FriendBook removes the person <br> Use case ends.

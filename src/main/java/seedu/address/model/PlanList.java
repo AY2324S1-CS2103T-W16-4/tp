@@ -1,7 +1,5 @@
 package seedu.address.model;
-import seedu.address.model.person.Person;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 /**

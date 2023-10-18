@@ -11,8 +11,8 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.commons.core.LogsCenter;
-import seedu.address.model.person.Name;
 import seedu.address.model.person.Person;
+import seedu.address.model.person.PlanName;
 import seedu.address.model.plan.Plan;
 
 /**
@@ -98,7 +98,7 @@ public class ModelManager implements Model {
     }
 
     @Override
-    public Person getPersonByName(Name name) {
+    public Person getPersonByName(PlanName name) {
         requireNonNull(name);
         return addressBook.getPersonByName(name);
     }

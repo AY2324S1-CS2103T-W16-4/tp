@@ -9,9 +9,8 @@ import java.util.stream.Stream;
 
 import seedu.address.logic.commands.AddPlanCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.model.person.Name;
+import seedu.address.model.person.PlanName;
 import seedu.address.model.plan.PlanDateTime;
-import seedu.address.model.plan.PlanName;
 
 
 /**
@@ -34,9 +33,9 @@ public class AddPlanCommandParser implements Parser<AddPlanCommand> {
         }
 
         argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_NAME, PREFIX_DATETIME, PREFIX_FRIEND);;
-        PlanName planName = ParserUtil.parsePlanName(argMultimap.getValue(PREFIX_NAME).get());
+        seedu.address.model.plan.PlanName planName = ParserUtil.parsePlanName(argMultimap.getValue(PREFIX_NAME).get());
         PlanDateTime planDateTime = ParserUtil.parseDateTime(argMultimap.getValue(PREFIX_DATETIME).get());
-        Name friendName = ParserUtil.parseName(argMultimap.getValue(PREFIX_FRIEND).get());
+        PlanName friendName = ParserUtil.parseName(argMultimap.getValue(PREFIX_FRIEND).get());
 
         return new AddPlanCommand(planName, planDateTime, friendName);
     }

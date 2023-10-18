@@ -11,10 +11,9 @@ import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.person.Address;
 import seedu.address.model.person.Email;
-import seedu.address.model.person.Name;
 import seedu.address.model.person.Phone;
+import seedu.address.model.person.PlanName;
 import seedu.address.model.plan.PlanDateTime;
-import seedu.address.model.plan.PlanName;
 import seedu.address.model.tag.Tag;
 
 /**
@@ -43,13 +42,13 @@ public class ParserUtil {
      *
      * @throws ParseException if the given {@code name} is invalid.
      */
-    public static Name parseName(String name) throws ParseException {
+    public static PlanName parseName(String name) throws ParseException {
         requireNonNull(name);
         String trimmedName = name.trim();
-        if (!Name.isValidName(trimmedName)) {
-            throw new ParseException(Name.MESSAGE_CONSTRAINTS);
+        if (!PlanName.isValidName(trimmedName)) {
+            throw new ParseException(PlanName.MESSAGE_CONSTRAINTS);
         }
-        return new Name(trimmedName);
+        return new PlanName(trimmedName);
     }
 
     /**
@@ -130,13 +129,13 @@ public class ParserUtil {
      *
      * @throws ParseException if the given {@code name} is invalid.
      */
-    public static PlanName parsePlanName(String planName) throws ParseException {
+    public static seedu.address.model.plan.PlanName parsePlanName(String planName) throws ParseException {
         requireNonNull(planName);
         String trimmedPlanName = planName.trim();
-        if (!PlanName.isValidPlanName(trimmedPlanName)) {
-            throw new ParseException(PlanName.MESSAGE_CONSTRAINTS);
+        if (!seedu.address.model.plan.PlanName.isValidPlanName(trimmedPlanName)) {
+            throw new ParseException(seedu.address.model.plan.PlanName.MESSAGE_CONSTRAINTS);
         }
-        return new PlanName(trimmedPlanName);
+        return new seedu.address.model.plan.PlanName(trimmedPlanName);
     }
 
     /**

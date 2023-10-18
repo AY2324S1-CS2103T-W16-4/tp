@@ -10,12 +10,11 @@ import seedu.address.commons.util.ToStringBuilder;
 import seedu.address.logic.Messages;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
-import seedu.address.model.person.Name;
 import seedu.address.model.person.Person;
+import seedu.address.model.person.PlanName;
 import seedu.address.model.person.exceptions.PersonNotFoundException;
 import seedu.address.model.plan.Plan;
 import seedu.address.model.plan.PlanDateTime;
-import seedu.address.model.plan.PlanName;
 
 /**
  * Adds a plan to the FriendBook.
@@ -39,14 +38,14 @@ public class AddPlanCommand extends Command {
     public static final String MESSAGE_FRIEND_NOT_FOUND = "The friend does not exist in the FriendBook";
 
     private Plan toAdd;
-    private final PlanName planName;
+    private final seedu.address.model.plan.PlanName planName;
     private final PlanDateTime planDateTime;
-    private final Name friendName;
+    private final PlanName friendName;
 
     /**
      * Creates an AddPlanCommand to add the specified {@code Plan}
      */
-    public AddPlanCommand(PlanName planName, PlanDateTime planDateTime, Name friendName) {
+    public AddPlanCommand(seedu.address.model.plan.PlanName planName, PlanDateTime planDateTime, PlanName friendName) {
         requireAllNonNull(planName, planDateTime, friendName);
         this.planName = planName;
         this.planDateTime = planDateTime;

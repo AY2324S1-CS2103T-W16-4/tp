@@ -22,8 +22,8 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.Model;
 import seedu.address.model.ReadOnlyAddressBook;
 import seedu.address.model.ReadOnlyUserPrefs;
-import seedu.address.model.person.Name;
 import seedu.address.model.person.Person;
+import seedu.address.model.person.PlanName;
 import seedu.address.model.plan.Plan;
 import seedu.address.testutil.PlanBuilder;
 
@@ -152,7 +152,7 @@ public class AddPlanCommandTest {
         }
 
         @Override
-        public Person getPersonByName(Name name) {
+        public Person getPersonByName(PlanName name) {
             return ALICE;
         }
 

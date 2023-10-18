@@ -23,10 +23,9 @@ import org.junit.jupiter.api.Test;
 
 import seedu.address.logic.Messages;
 import seedu.address.logic.commands.AddPlanCommand;
-import seedu.address.model.person.Name;
+import seedu.address.model.person.PlanName;
 import seedu.address.model.plan.Plan;
 import seedu.address.model.plan.PlanDateTime;
-import seedu.address.model.plan.PlanName;
 import seedu.address.testutil.PlanBuilder;
 
 public class AddPlanCommandParserTest {
@@ -83,16 +82,16 @@ public class AddPlanCommandParserTest {
     public void parse_invalidValue_failure() {
         // invalid name
         assertParseFailure(parser, INVALID_PLAN_NAME_DESC + PLAN_DATETIME_DESC_MEETING + PLAN_FRIEND_DESC_MEETING,
-                PlanName.MESSAGE_CONSTRAINTS);
+                seedu.address.model.plan.PlanName.MESSAGE_CONSTRAINTS);
         // invalid datetime
         assertParseFailure(parser, PLAN_NAME_DESC_MEETING + INVALID_PLAN_DATETIME_DESC + PLAN_FRIEND_DESC_MEETING,
                 PlanDateTime.MESSAGE_CONSTRAINTS);
         // invalid friend
         assertParseFailure(parser, PLAN_NAME_DESC_MEETING + PLAN_DATETIME_DESC_MEETING + INVALID_PLAN_FRIEND_DESC,
-                Name.MESSAGE_CONSTRAINTS);
+                PlanName.MESSAGE_CONSTRAINTS);
         // two invalid values, only first invalid value reported
         assertParseFailure(parser, INVALID_PLAN_NAME_DESC + INVALID_PLAN_DATETIME_DESC + PLAN_FRIEND_DESC_MEETING,
-                PlanName.MESSAGE_CONSTRAINTS);
+                seedu.address.model.plan.PlanName.MESSAGE_CONSTRAINTS);
 
         // non-empty preamble
         assertParseFailure(parser, PREAMBLE_NON_EMPTY + PLAN_NAME_DESC_MEETING

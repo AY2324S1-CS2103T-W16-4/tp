@@ -5,8 +5,8 @@ import java.util.function.Predicate;
 
 import javafx.collections.ObservableList;
 import seedu.address.commons.core.GuiSettings;
-import seedu.address.model.person.Name;
 import seedu.address.model.person.Person;
+import seedu.address.model.person.PlanName;
 import seedu.address.model.plan.Plan;
 
 /**
@@ -69,7 +69,7 @@ public interface Model {
      * Gets the Person that has the same {@code name} from the list.
      * A Person with the same name must exist in the list, else Exception is thrown.
      */
-    Person getPersonByName(Name name);
+    Person getPersonByName(PlanName name);
 
     /**
      * Deletes the given person.

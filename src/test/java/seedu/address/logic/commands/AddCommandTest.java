@@ -22,8 +22,8 @@ import seedu.address.model.AddressBook;
 import seedu.address.model.Model;
 import seedu.address.model.ReadOnlyAddressBook;
 import seedu.address.model.ReadOnlyUserPrefs;
-import seedu.address.model.person.Name;
 import seedu.address.model.person.Person;
+import seedu.address.model.person.PlanName;
 import seedu.address.model.plan.Plan;
 import seedu.address.testutil.PersonBuilder;
 
@@ -146,7 +146,7 @@ public class AddCommandTest {
         }
 
         @Override
-        public Person getPersonByName(Name name) {
+        public Person getPersonByName(PlanName name) {
             throw new AssertionError("This method should not be called.");
         }
 

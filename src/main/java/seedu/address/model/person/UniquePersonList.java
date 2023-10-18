@@ -41,7 +41,7 @@ public class UniquePersonList implements Iterable<Person> {
      * Gets the Person that has the same {@code name} from the list.
      * A Person with the same name must exist in the list, else Exception is thrown.
      */
-    public Person getPersonByName(Name name) {
+    public Person getPersonByName(PlanName name) {
         requireNonNull(name);
         Optional<Person> matchingPerson = internalList.stream()
                 .filter(person -> person.getName().equals(name))

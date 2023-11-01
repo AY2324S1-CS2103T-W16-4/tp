@@ -350,7 +350,10 @@ Unsuccessful Output:
 
 - Invalid command: `Invalid command.` + help message with list of all commands
 
-- Missing arguments: `Invalid syntax: Missing arguments. Syntax: find-plan FRIEND_NAME`
+- Missing arguments: `Invalid command format!
+  find-plan: Finds all plans which contain the specified friend.
+  Parameters: FRIEND_NAME
+  Example: find-plan Elijah Chia`
 
 - Not a valid friend: `The friend does not exist in the FriendBook.`
 
